@@ -1,0 +1,32 @@
+@import "bootstrap/scss/bootstrap";
+
+body { 
+  background-color: #DAE0E6;
+}
+
+h1 {
+  color: #1C1C1C;
+  padding: 5% 5%;
+  text-align: center;
+}
+
+h2 {
+  color: #0079D3;
+  padding-top: 20px;
+}
+
+#logo { 
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  color: #1C1C1C;
+
+}
+
+.author {
+  font-size: 1.0rem;
+  line-height: 2;
+  color: #1C1C1C;
+}
+

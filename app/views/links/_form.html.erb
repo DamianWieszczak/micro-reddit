@@ -1,18 +1,31 @@
-<%= form_with(model: link) do |form| %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= form_with(model: link) do |form| %>
 
-  <%= render "shared/errors", object: link %>
+        <%= render "shared/errors", object: link %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+        <div class="form-group row">
+          <%= form.label :title, class: "col-1 col-form-label" %>
+          <div class="col-10">
+            <%= form.text_field :title, class: "form-control shadow rounded", placeholder: "Title of the topic link" %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= form.label :url, class: "col-1 col-form-label" %>
+          <div class="col-10">
+            <%= form.text_field :url, class: "form-control shadow rounded", placeholder: "Link to the topic" %>
+          </div>
+        </div>
+
+        <div class="form-group justify-content-center mt-4 text-center">
+          <div class="col-10">
+            <%= form.submit "Submit", class: "btn btn-primary" %>
+            <%= link_to 'Back', links_path, class: "btn btn-outline-dark" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,12 +1,15 @@
-<p>
-  <strong>Title:</strong>
-  <%= @link.title %>
-</p>
+<div class="row">
+  <div class="container mt-3">
+    <h2><%= @link.title %></h2>
+    <small class="author">Submitted by <%= @link.user.email %></small>
+    <hr>
+      <%= link_to 'Visit link', @link.url, class: "btn btn-primary" %> 
+    <% if @link.user == current_user %>
+      <%= link_to 'Edit', edit_link_path(@link), class: "btn btn-outline-dark" %>
+      <%= link_to 'Back', links_path, class: "btn btn-outline-dark" %>
+    <% end %>
+  </div>
+</div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @link.url %>
-</p>
 
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<%= link_to 'Back', links_path %>
+
