@@ -28,6 +28,8 @@ gem 'devise'
 # Add like/dislike, upvote/downvote links
 gem 'acts_as_votable'
 
+gem 'simple_form'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

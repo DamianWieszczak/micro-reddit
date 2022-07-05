@@ -8,7 +8,7 @@
       <%= link_to 'Edit', edit_link_path(@link), class: "btn btn-outline-dark" %>
       <%= link_to 'Back', links_path, class: "btn btn-outline-dark" %>
     <% end %>
-    
+
     <%= link_to like_link_path(@link), method: :put, class: "btn btn-light" do %>
       <i class="fas fa-arrow-up"></i>
       Upvote
@@ -22,5 +22,20 @@
   </div>
 </div>
 
+<h3><%= @link.comments.count %> comments</h3>
+
+<div class="card my-1">
+  <div class="card-body">
+    <%= simple_form_for [@link, @link.comments.build] do |f| %>
+      <div class="form-group">
+        <%= f.label "New Comment" %>
+        <%= f.text_area :body, class: "form-control" %>
+      </div>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<%= render @link.comments %>
 
 

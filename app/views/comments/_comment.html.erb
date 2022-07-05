@@ -1,0 +1,16 @@
+<% unless !comment.persisted? %>
+  <div class="card">
+    <div class="card-header">
+    <h3><em>Comment</em></h3>
+    <div class="card-body">
+      <h4><%= comment.body %></h4>
+      <hr>
+      <small class="author">Submitted <%= time_ago_in_words(comment.created_at) %> ago by <%= @link.user.email %></small>
+
+    <% if @link.user == current_user %><br>
+      <%= link_to 'Edit', edit_link_path(@link), class: "badge badge-pill badge-dark" %>
+      <%= link_to 'Back', links_path, class: "badge badge-pill badge-secondary" %>
+    <% end %>
+    </div>
+  </div>
+<% end %>
