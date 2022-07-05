@@ -5,7 +5,7 @@
     <div class="card-body">
       <h4><%= comment.body %></h4>
       <hr>
-      <small class="author">Submitted <%= time_ago_in_words(comment.created_at) %> ago by <%= @link.user.email %></small>
+      <small class="author">Submitted <%= time_ago_in_words(comment.created_at) %> ago by <%= @link.user.name %></small>
 
     <% if @link.user == current_user %><br>
       <%= link_to 'Edit', edit_link_path(@link), class: "badge badge-pill badge-dark" %>
