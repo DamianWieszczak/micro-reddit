@@ -22,8 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
 # Add user authentication with devise gem
 gem 'devise'
+# Add like/dislike, upvote/downvote links
+gem 'acts_as_votable'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
